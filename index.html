@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decoy's Portfolio</title>
+    <style>
+        :root {
+            --background-color-light: #f0f0f0;
+            --background-color-dark: #333;
+            --text-color-light: #333;
+            --text-color-dark: #f0f0f0;
+            --primary-color-light: #333;
+            --primary-color-dark: #f0f0f0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color-light);
+            color: var(--text-color-light);
+        }
+        .header {
+            background-color: var(--primary-color-light);
+            color: var(--text-color-dark);
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .profile {
+            text-align: center;
+        }
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .section {
+            margin: 50px 0;
+        }
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        .dark-theme {
+            --background-color-light: #333;
+            --background-color-dark: #f0f0f0;
+            --text-color-light: #f0f0f0;
+            --text-color-dark: #333;
+            --primary-color-light: #f0f0f0;
+            --primary-color-dark: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Decoy's Portfolio</h1>
+        <button id="theme-switcher">Switch to Dark Mode</button>
+    </div>
+    <div class="container">
+        <div class="profile">
+            <img src="decoy.png" alt="Profile Picture">
+            <h2>Decoy</h2>
+            <p>Web Developer</p>
+        </div>
+        <div class="section">
+            <h2>Projects</h2>
+            <div class="card">
+                <h3>GPTPromptGen</h3>
+                <p>Awesome ChatGPT Prompt Generator.</p>
+            </div>
+            <div class="card">
+                <h3>Single Page Portfolio</h3>
+                <p>You're looking at it.</p>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Contact</h2>
+            <p>Email: john.doe@example.com</p>
+            <p>Phone: 123-456-7890</p>
+        </div>
+    </div>
+    <script>
+        const themeSwitcher = document.getElementById('theme-switcher');
+        themeSwitcher.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            if (document.body.classList.contains('dark-theme')) {
+                themeSwitcher.textContent = 'Switch to Light Mode';
+            } else {
+                themeSwitcher.textContent = 'Switch to Dark Mode';
+            }
+        });
+    </script>
+</body>
+</html>
